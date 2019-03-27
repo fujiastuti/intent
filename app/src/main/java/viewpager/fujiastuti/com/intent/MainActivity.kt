@@ -16,7 +16,17 @@ class MainActivity : AppCompatActivity() {
         btnPindahActivityImplisit.setOnClickListener {
             startActivity(Intent(this,ImplisitIntentActivity::class.java))
         }
+        btnPindahActivityIntentBundle.setOnClickListener {
+            val intent:Intent = Intent (this, IntentBundleActivity ::class.java)
+            intent.putExtra ("NAMAKU", "Fuji Astuti")
+            intent.putExtra ("ALAMAT", "Brebes")
+            intent.putExtra ("NPM", "16670026")
+            intent.putExtra ("JENIS_KELAMIN", "PEREMPUAN")
+            intent.putExtra ("FOTO",R.drawable.fj )
+            startActivity(intent)
 
+
+        }
 
     }
 }

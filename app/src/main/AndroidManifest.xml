@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ExplisitIntentActivity" />
-        <activity android:name=".ImplisitIntentActivity"></activity>
+        <activity android:name=".ImplisitIntentActivity" />
+        <activity android:name=".IntentBundleActivity"></activity>
     </application>
 
 </manifest>

@@ -20,6 +20,18 @@
         android:background="@color/colorAccent"
         android:textColor="@android:color/white"
         android:textSize="20dp"/>
+    <Button
+        android:text="Google"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:layout_below="@+id/btnpgl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:id="@+id/btnbuka"
+        android:onClick="buka"/>
 
 
 </LinearLayout>

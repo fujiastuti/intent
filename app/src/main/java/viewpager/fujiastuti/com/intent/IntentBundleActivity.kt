@@ -2,6 +2,7 @@ package viewpager.fujiastuti.com.intent
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_intent_bundle.*
 
 class IntentBundleActivity : AppCompatActivity() {
@@ -10,15 +11,22 @@ class IntentBundleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intent_bundle)
 
-        val NAMAKU =intent.getStringExtra("NAMAKU")
-        val ALAMAT =intent.getStringExtra("ALAMAT")
-        val NPM =intent.getStringExtra("NPM")
-        val JENIS_KELAMIN =intent.getStringExtra("JENIS_KELAMIN")
-        val FOTO =intent.getStringExtra("FOTO")
-        tvNamaku.text = NAMAKU
-        tvAlamat.text = ALAMAT
-        tvNPM.text = NPM
-        tvJenis_Kelamin.text = JENIS_KELAMIN
+        val namapanggilan = intent.getStringExtra("Nama Panggilan")
+        val ttl = intent.getStringExtra("TTL")
+        val alamatrumah = intent.getStringExtra("Alamat Rumah")
+        val hobby = intent.getStringExtra("Hobby")
+        val agama = intent.getStringExtra("Agama")
+        val email = intent.getStringExtra("Email")
+        val foto = intent.getStringExtra("FOTO")
+
+
+        Glide.with(this).load(foto).override(512, 512).error(R.drawable.fj).into(ivProfil)
+        tvnamapanggilan.text = namapanggilan
+        tvttl.text = ttl
+        tvalamatrumah.text = alamatrumah
+        tvhobby.text = hobby
+        tvagama.text = agama
+        tvemail.text = email
 
     }
 }

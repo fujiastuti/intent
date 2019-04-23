@@ -10,6 +10,7 @@ import android.os.Environment.getExternalStorageDirectory
 import android.provider.MediaStore
 import android.support.v4.app.ActivityCompat.startActivityForResult
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_implisit_intent.*
 import viewpager.fujiastuti.com.intent.R.id.btnCapture
@@ -17,6 +18,15 @@ import java.io.File
 
 @Suppress("DEPRECATED_IDENTITY_EQUALS")
 class ImplisitIntentActivity : AppCompatActivity() {
+
+    fun buka(view: View) {
+        val url = "https://google.com"
+        val bukabrowser = Intent(Intent.ACTION_VIEW)
+        bukabrowser.data = Uri.parse(url)
+        startActivity(bukabrowser)
+    }
+
+
     val REQUEST_IMAGE_CAPTURE = 0
     private val TAKE_PICTURE = 1
     private var imageUri: Uri? = null
